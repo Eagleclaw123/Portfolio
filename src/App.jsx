@@ -1,27 +1,30 @@
 import React from "react";
 import "./App.css";
-import HeroSection from "./components/HeroSection";
-import Section from "./components/Section";
+
+import HeroSection from "./components/HeroSection.jsx";
+import Section from "./components/Section.jsx";
+import GradientCanvas from "./components/GradientCanvas.jsx";
+import cloudSvg from "./assets/icons/cloud.svg";
 import mobileSvg from "./assets/icons/mobile.svg";
 import desktopSvg from "./assets/icons/desktop.svg";
-import cloudSvg from "./assets/icons/cloud.svg";
-import GradientCanvas from "./components/GradientCanvas";
+import AnimatedLine from "./components/AnimatedLine.jsx";
 
 function App() {
+  function handleLoad() {}
   return (
     <div className="App">
-      <HeroSection />
+      <HeroSection onSpineLoaded={handleLoad} />
       <GradientCanvas />
       <div className="sections">
         <Section
           svgPath={desktopSvg}
           title="Web Developer"
-          description="A full stack web developer experienced in building and maintaining both front-end and back-end of web applications, ensuring seamless functionality and user experience"
+          description="A full stack web developer experienced in building both front-end and back-end of web applications, ensuring seamless functionality and user experience"
         />
         <Section
           svgPath={cloudSvg}
-          title="Cloud and DevOps Specialist"
-          description="A beginner in Cloud and DevOps, focused on learning cloud infrastructure management, automation, and continuous integration to support efficient software deployment and operations."
+          title="Cloud and DevOps"
+          description="A Cloud and DevOps professional with hands-on experience in cloud platforms, automation, and continuous integration for efficient software deployment."
         />
         <Section
           svgPath={mobileSvg}
