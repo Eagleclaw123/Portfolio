@@ -6,6 +6,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* This helps with consistent sizing */
+  /* overflow: hidden; */
+}
+html,
+body {
+  overflow-x: hidden;
+  cursor: default;
 }
 
 :root {

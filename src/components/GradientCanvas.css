@@ -1,13 +1,52 @@
 #gradient-canvas {
-  width: 120%;
+  width: 200%;
   height: 87%;
   transform: rotate(-35deg);
   position: absolute;
-  top: -10%;
+  top: -67%;
   left: -50%;
   z-index: 2;
   --gradient-color-1: #fb2aa7;
   --gradient-color-2: #96eeef;
   --gradient-color-3: #872ff2;
   --gradient-color-4: #c353ab;
+}
+
+/* Media queries for different screen sizes */
+@media (max-width: 1200px) {
+  #gradient-canvas {
+    width: 200%;
+    height: 87%;
+    top: -67%;
+    left: -50%;
+  }
+}
+
+@media (max-width: 768px) {
+  #gradient-canvas {
+    width: 200%;
+    height: 87%;
+    top: -60%;
+    left: -70%;
+  }
+}
+
+/* @media (max-width: 600px) {
+  #gradient-canvas {
+    width: 250%;
+    height: 150%;
+    transform: rotate(-45deg);
+    top: -25%;
+    left: -85%;
+  }
+} */
+
+@media (max-width: 480px) {
+  #gradient-canvas {
+    width: 250%;
+    height: 150%;
+    transform: rotate(-45deg);
+    top: -25%;
+    left: -85%;
+  }
 }
