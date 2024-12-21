@@ -22,22 +22,28 @@
   font-size: 4vw;
   z-index: 10;
   position: absolute;
-  bottom: 65%;
-  left: 5%;
+  bottom: 50%;
+  left: 6%;
 }
 
 .hero-text h1 {
   font-size: 6vw; /* Responsive font size */
   margin: 0;
+  background: -webkit-linear-gradient(left, #fff, #d1d1d1, #bababa, #050505);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 5s ease infinite;
+  z-index: 10;
 }
 
 .hero-text .description {
   font-size: 3vw;
-  background: -webkit-linear-gradient(left, #0e0d0d, #ff0101);
+  background: -webkit-linear-gradient(left, #81d3ff, #ff3eff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: gradient 5s ease infinite;
   position: absolute;
+  margin-top: 0.6rem;
   z-index: 10;
 }
 

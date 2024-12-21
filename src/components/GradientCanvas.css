@@ -7,9 +7,9 @@
   left: -50%;
   z-index: 2;
   --gradient-color-1: #fb2aa7;
-  --gradient-color-2: #96eeef;
-  --gradient-color-3: #872ff2;
-  --gradient-color-4: #c353ab;
+  --gradient-color-2: #81d3ff;
+  --gradient-color-3: #ff3eff;
+  --gradient-color-4: #872ff2;
 }
 
 /* Media queries for different screen sizes */

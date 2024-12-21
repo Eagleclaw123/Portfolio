@@ -1,0 +1,123 @@
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 1rem; /* Add space between items */
+  justify-content: start; /* Align items to the start */
+}
+
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  background-color: #2e2e2e;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #e5e7eb;
+  border-radius: 9999px;
+  width: fit-content;
+  margin-bottom: 0.25rem;
+}
+
+.skill-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.skill-name {
+  color: inherit;
+}
+
+/* Skill-specific colors */
+.skill-dot.blue {
+  background-color: #3b82f6;
+}
+
+.skill-dot.green {
+  background-color: #10b981;
+}
+
+.skill-dot.yellow {
+  background-color: #f59e0b;
+}
+
+.skill-dot.red {
+  background-color: #ef4444;
+}
+
+.skill-dot.orange {
+  background-color: #f97316;
+}
+
+.skill-dot.pink {
+  background-color: #ec4899;
+}
+
+.skill-dot.purple {
+  background-color: #a855f7;
+}
+
+.skill-dot.cyan {
+  background-color: #06b6d4;
+}
+
+.skill-dot.teal {
+  background-color: #14b8a6;
+}
+
+.skill-dot.magenta {
+  background-color: #d946ef;
+}
+
+.skill-dot.lime {
+  background-color: #84cc16;
+}
+
+.skill-dot.violet {
+  background-color: #8b5cf6;
+}
+
+.skill-dot.turquoise {
+  background-color: #2dd4bf;
+}
+
+.skill-dot.gold {
+  background-color: #facc15;
+}
+
+.skill-dot.salmon {
+  background-color: #f87171;
+}
+
+.skill-dot.navy {
+  background-color: #1e3a8a;
+}
+
+.skill-dot.brown {
+  background-color: #a16207;
+}
+
+.skill-dot.olive {
+  background-color: #6a994e;
+}
+
+.skill-dot.coral {
+  background-color: #fb7185;
+}
+
+.skill-dot.skyblue {
+  background-color: #38bdf8;
+}
+
+.skill-dot.darkgreen {
+  background-color: #065f46;
+}

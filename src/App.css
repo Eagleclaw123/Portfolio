@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
+  margin-top: 5rem;
 }
 .loading-screen {
   display: flex;

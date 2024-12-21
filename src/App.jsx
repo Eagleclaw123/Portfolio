@@ -8,13 +8,14 @@ import cloudSvg from "./assets/icons/cloud.svg";
 import mobileSvg from "./assets/icons/mobile.svg";
 import desktopSvg from "./assets/icons/desktop.svg";
 import AnimatedLine from "./components/AnimatedLine.jsx";
+import SkillsContainer from "./components/SkillsContainer.jsx";
+import Projects from "./components/Projects.jsx";
 
 function App() {
   function handleLoad() {}
   return (
     <div className="App">
       <HeroSection onSpineLoaded={handleLoad} />
-      <GradientCanvas />
       <div className="sections">
         <Section
           svgPath={desktopSvg}
@@ -32,6 +33,8 @@ function App() {
           description="A mobile developer experienced in building and maintaining applications for iOS and Android, focusing on delivering high-performance, user-friendly mobile experiences."
         />
       </div>
+      <SkillsContainer />
+      <Projects />
     </div>
   );
 }

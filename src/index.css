@@ -12,7 +12,13 @@ html,
 body {
   overflow-x: hidden;
   cursor: default;
+  font-family: "Recoleta", sans-serif; /* Apply Recoleta font */
 }
+
+/* h2,
+h3 {
+  font-family: "Recoleta", serif; /* Apply Recoleta font to headings */
+} */
 
 :root {
   --gradient-color-1: #ff0000; /* Red */
