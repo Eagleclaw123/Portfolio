@@ -8,7 +8,7 @@ const SkillsContainer = () => {
     <div className="maincontainer">
       <div className="container container-skills">
         <h1>Skills</h1>
-        <Skills></Skills>
+        <Skills />
       </div>
       <div className="container">
         <RotatingSphere />

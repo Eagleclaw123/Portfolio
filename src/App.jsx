@@ -10,6 +10,7 @@ import desktopSvg from "./assets/icons/desktop.svg";
 import AnimatedLine from "./components/AnimatedLine.jsx";
 import SkillsContainer from "./components/SkillsContainer.jsx";
 import Projects from "./components/Projects.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   function handleLoad() {}
@@ -35,6 +36,7 @@ function App() {
       </div>
       <SkillsContainer />
       <Projects />
+      <Footer />
     </div>
   );
 }

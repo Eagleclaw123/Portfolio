@@ -4,9 +4,8 @@ import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
 
 const descriptions = [
-  "A passionate developer.",
+  "I am a FullStack web and app developer",
   "Creating beautiful web experiences.",
-  "FullStack web and app developer",
   "Loves to code and learn new things.",
   "DevOps Specialist | Process Optimizer",
 ];

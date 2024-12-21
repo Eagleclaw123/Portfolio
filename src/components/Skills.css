@@ -121,3 +121,30 @@
 .skill-dot.darkgreen {
   background-color: #065f46;
 }
+
+@media (max-width: 768px) {
+  .skills-grid {
+    justify-content: center;
+  }
+
+  .skill-card {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills-grid {
+    justify-content: center;
+  }
+
+  .skill-card {
+    font-size: 0.7rem;
+    padding: 0.4rem;
+  }
+
+  .skill-dot {
+    width: 6px;
+    height: 6px;
+  }
+}

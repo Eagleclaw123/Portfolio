@@ -40,3 +40,17 @@
     transform: rotate(360deg);
   }
 }
+@media (max-width: 768px) {
+  .sections {
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero-text .description {
+    font-size: 5vw;
+  }
+
+  .hero-image {
+    height: 40vh;
+  }
+}
