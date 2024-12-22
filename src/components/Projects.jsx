@@ -18,7 +18,7 @@ const projects = [
     ],
     image: "/assets/img6.png", // Replace with your image path
     backgroundImage: "/assets/bg3.jpg",
-    github: "https://github.com/your-project-link", // GitHub link
+    github: "https://github.com/Eagleclaw123/ReStore", // GitHub link
   },
   {
     title: "Delicious Meals",
@@ -38,7 +38,7 @@ const projects = [
     ],
     image: "/assets/img1.png", // Replace with your image path
     backgroundImage: "/assets/bg2.png",
-    github: "https://github.com/your-project-link", // GitHub link
+    github: "https://github.com/Eagleclaw123/Delicious-Meals", // GitHub link
   },
 
   {
@@ -55,7 +55,7 @@ const projects = [
     ],
     image: "/assets/img4.png", // Replace with your image path
     backgroundImage: "/assets/bg1.png",
-    github: "https://github.com/your-project-link", // GitHub link
+    github: "https://github.com/Eagleclaw123/Student-Data-Portal", // GitHub link
   },
 
   {
@@ -71,7 +71,7 @@ const projects = [
     ],
     image: "/assets/img5.jpg", // Replace with your image path
     backgroundImage: "/assets/bg4.png",
-    github: "https://github.com/your-project-link", // GitHub link
+    github: null, // GitHub link
   },
   {
     title: "Your Smart Calender ",
@@ -80,7 +80,7 @@ const projects = [
     technologies: ["React.js", "CSS-Modules", "Framer Motion", "Spline"],
     image: "/assets/img3.png", // Replace with your image path
     backgroundImage: "/assets/bg6.jpg",
-    github: "https://github.com/your-project-link", // GitHub link
+    github: "https://github.com/Eagleclaw123/Calendar-App-", // GitHub link
   },
   {
     title: "How Many Tries",
@@ -89,7 +89,7 @@ const projects = [
     technologies: ["React Native", "Expo", "Android Studio", "TypeScript"],
     image: "/assets/img2.png", // Replace with your image path
     backgroundImage: "/assets/img10.jpg",
-    github: "https://github.com/your-project-link", // GitHub link
+    github: "https://github.com/Eagleclaw123/How-Many-Tries", // GitHub link
   },
 ];
 

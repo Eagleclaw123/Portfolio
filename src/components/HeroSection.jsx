@@ -82,9 +82,9 @@ const HeroSection = ({ onSpineLoaded }) => {
             </motion.h1>
             <motion.p
               className="description"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2, duration: 1 }}
+              initial={{ opacity: 0, skewX: -10 }}
+              animate={{ opacity: 1, skewX: 0 }}
+              transition={{ delay: 0.3, duration: 1 }}
               key={currentDescription}
             >
               {descriptions[currentDescription]}
@@ -103,8 +103,6 @@ const HeroSection = ({ onSpineLoaded }) => {
           />
         </div>
       </div>
-      {isSplineLoaded && <AnimatedLine />}{" "}
-      {/* Add the AnimatedLine component here */}
     </div>
   );
 };

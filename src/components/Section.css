@@ -10,6 +10,7 @@
   max-width: 500px;
   height: 45vh;
   transition: transform 0.3s;
+  border: 2px solid #1d1d1d;
 }
 
 .section:hover {
@@ -47,7 +48,9 @@ p {
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
   .section {
-    padding: 15px; /* Decrease padding */
+    padding: 15px;
+    width: 90%;
+    height: auto; /* Decrease padding */
   }
 
   h2 {
@@ -81,7 +84,7 @@ p {
     margin: 15px; /* Adjust margins for smaller screens */
   }
 
-  h2 {
+  .section h2 {
     font-size: 1.6rem; /* Further decrease heading size */
   }
 
@@ -90,12 +93,15 @@ p {
   }
 }
 
-@media (max-width: 576px) {
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .svg-container {
+    max-width: 80px; /* Further decrease max-width for images on larger mobile devices */
+  }
   .section {
-    padding: 10px; /* Decrease padding more for mobile */
+    padding: 18px; /* Decrease padding more for mobile */
   }
 
-  h2 {
+  .section h2 {
     font-size: 1.4rem; /* Smaller heading size */
   }
 
@@ -104,8 +110,26 @@ p {
   }
 }
 
-@media only screen and (min-width: 400px) and (max-width: 576px) {
+@media only screen and (min-width: 300px) and (max-width: 576px) {
   .svg-container {
     max-width: 60px; /* Further decrease max-width for images on larger mobile devices */
   }
+  .section {
+    padding: 15px;
+    /* margin: 0px; */
+  }
+
+  .section h2 {
+    font-size: 1.4rem; /* Smaller heading size */
+  }
+
+  p {
+    font-size: 1rem; /* Smaller paragraph size */
+  }
+  /* .svg-container svg,
+  .svg-container img {
+    width: 50%;
+    height: auto;
+    filter: invert(100%) brightness(100%);
+  } */
 }
