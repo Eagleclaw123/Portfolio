@@ -1,7 +1,7 @@
 import React from "react";
 import "./SkillsContainer.css";
 import Skills from "./Skills";
-import RotatingSphere from "./rotatingSphere";
+import RotatingSphere from "./RotatingSphere.jsx";
 
 const SkillsContainer = () => {
   return (
