@@ -3,13 +3,14 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
+  padding: 1rem; /* Added padding for better spacing */
 }
 
 .skills-grid {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap */
-  gap: 1rem; /* Add space between items */
-  justify-content: start; /* Align items to the start */
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: start;
 }
 
 .skill-card {
@@ -25,6 +26,7 @@
   border-radius: 9999px;
   width: fit-content;
   margin-bottom: 0.25rem;
+  transition: transform 0.2s ease; /* Added transition for hover effect */
 }
 
 .skill-dot {
@@ -121,33 +123,6 @@
 .skill-dot.darkgreen {
   background-color: #065f46;
 }
-
-/* @media (max-width: 768px) {
-  .skills-grid {
-    justify-content: center;
-  }
-
-  .skill-card {
-    font-size: 0.75rem;
-    padding: 0.5rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .skills-grid {
-    justify-content: center;
-  }
-
-  .skill-card {
-    font-size: 0.7rem;
-    padding: 0.4rem;
-  }
-
-  .skill-dot {
-    width: 6px;
-    height: 6px;
-  }
-} */
 
 @media only screen and (min-width: 400px) and (max-width: 780px) {
   .skill-card {

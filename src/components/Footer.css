@@ -54,9 +54,13 @@
 .footer-section a {
   display: flex;
   align-items: center;
-  color: #cccccc;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s, text-decoration 0.3s;
+}
+
+.footer-section a span {
+  color: #cccccc;
 }
 
 .footer-section a i {
@@ -64,9 +68,10 @@
 }
 
 /* Hover effects */
-.footer-section a:hover {
+.footer-section a:hover span {
   color: #ffffff;
-  text-decoration: underline;
+  /* text-decoration: underline; */
+  text-decoration: underline; /* Underline only the text in span on hover */
 }
 
 /* Mobile layout - Stack links vertically */

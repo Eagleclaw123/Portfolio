@@ -9,6 +9,7 @@ const AnimatedLine = ({
   strokeWidth = 4,
   segmentLength = 80,
   animationSpeed = 2,
+  descriptionInterval = 3, // new prop to match the description interval
 }) => {
   const gradientId = "lineGradient";
   const { startLineAnimation } = useAnimation(); // Access animation trigger
@@ -69,7 +70,7 @@ const AnimatedLine = ({
           strokeDashoffset: startLineAnimation ? [-totalLength, 0] : 0, // Animate when context changes
         }}
         transition={{
-          duration: animationSpeed,
+          duration: descriptionInterval, // Match animation speed to description interval
           repeat: Infinity,
           ease: "circOut",
         }}

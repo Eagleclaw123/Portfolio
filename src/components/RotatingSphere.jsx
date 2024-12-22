@@ -20,11 +20,11 @@ const RotatingSphere = () => {
     renderer.setPixelRatio(window.devicePixelRatio);
     mount.appendChild(renderer.domElement);
 
-    // Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 1.2); // Slightly increase intensity
+    // Lighting setup
+    const ambientLight = new THREE.AmbientLight(0xffffff, 1.2);
     scene.add(ambientLight);
 
-    // Sphere geometry with icons
+    // Icons to be mapped on the sphere
     const icons = [
       "/assets/javascript.png",
       "/assets/microsoft-azure.png",
@@ -33,68 +33,83 @@ const RotatingSphere = () => {
       "/assets/mongodb.png",
       "/assets/css.png",
       "/assets/html.png",
+      "/assets/framer.svg",
       "/assets/python.png",
       "/assets/typescript.png",
       "/assets/cpp.png",
-      "/assets/express.png",
-      "/assets/framer.png",
       "/assets/ansible.png",
-      "/assets/nextjs.png",
+      "/assets/express.png",
       "/assets/redux.png",
       "/assets/bootstrap.png",
       "/assets/c.png",
+      "/assets/nextjs.png",
       "/assets/git.png",
-      "/assets/github.png",
+      "/assets/github.svg",
       "/assets/postman.png",
       "/assets/microsoft-word.png",
       "/assets/linux.png",
-      // "/assets/cloud.svg",
-      // "/assets/typescript.svg",
     ];
 
     const radius = 3; // Sphere radius
     const sphereGroup = new THREE.Group();
-
-    icons.forEach((icon, index) => {
-      const texture = new THREE.TextureLoader().load(icon);
-      const material = new THREE.SpriteMaterial({
-        map: texture,
-        alphaTest: 0.5,
-      });
-      const sprite = new THREE.Sprite(material);
-      sprite.scale.set(1, 1, 1); // Set sprite size
-
-      // Distribute sprites on a sphere
-      const phi = Math.acos(-1 + (2 * index) / icons.length);
-      const theta = Math.sqrt(icons.length * Math.PI) * phi;
-
-      sprite.position.setFromSphericalCoords(radius, phi, theta);
-      sphereGroup.add(sprite);
-    });
-
-    // Add an initial tilt to the group to prevent alignment with the rotation axis
-    sphereGroup.rotation.x = 0.5; // Rotate around the X-axis
-    sphereGroup.rotation.y = 0.5; // Rotate around the Y-axis
-
     scene.add(sphereGroup);
 
-    // Orbit Controls for interaction
+    // Preload textures and create sprites
+    const loadIcons = async () => {
+      const textureLoader = new THREE.TextureLoader();
+      const textures = await Promise.all(
+        icons.map(
+          (icon) =>
+            new Promise((resolve, reject) => {
+              textureLoader.load(
+                icon,
+                (texture) => resolve(texture),
+                undefined,
+                (err) => reject(err)
+              );
+            })
+        )
+      );
+
+      textures.forEach((texture, index) => {
+        const material = new THREE.SpriteMaterial({
+          map: texture,
+          transparent: true,
+          alphaTest: 0.5,
+        });
+
+        const sprite = new THREE.Sprite(material);
+        sprite.scale.set(0.8, 0.8, 0.8); // Adjust scale as needed
+
+        // Distribute sprites on a sphere
+        const phi = Math.acos(-1 + (2 * index) / icons.length);
+        const theta = Math.sqrt(icons.length * Math.PI) * phi;
+        sprite.position.setFromSphericalCoords(radius, phi, theta);
+
+        sphereGroup.add(sprite);
+      });
+    };
+
+    loadIcons();
+
+    // Orbit Controls
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
     controls.enablePan = false;
     controls.enableZoom = false;
 
-    // Animation
+    // Animation loop
     const animate = () => {
       requestAnimationFrame(animate);
-      sphereGroup.rotation.y += 0.005; // Rotation around Y-axis
-      sphereGroup.rotation.x += 0.002; // Small rotation around X-axis for dynamic movement
-      renderer.render(scene, camera);
+      sphereGroup.rotation.y += 0.005; // Y-axis rotation
+      sphereGroup.rotation.x += 0.002; // X-axis slight rotation
       controls.update();
+      renderer.render(scene, camera);
     };
+
     animate();
 
-    // Handle resizing
+    // Handle window resizing
     const handleResize = () => {
       const newWidth = mount.clientWidth;
       const newHeight = mount.clientHeight;
@@ -102,10 +117,14 @@ const RotatingSphere = () => {
       camera.aspect = newWidth / newHeight;
       camera.updateProjectionMatrix();
     };
+
     window.addEventListener("resize", handleResize);
 
+    // Cleanup on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
+      sphereGroup.clear();
+      renderer.dispose();
       mount.removeChild(renderer.domElement);
     };
   }, []);

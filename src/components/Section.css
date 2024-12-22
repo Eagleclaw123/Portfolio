@@ -39,7 +39,7 @@
   animation: gradient 5s ease infinite;
 }
 
-p {
+.section p {
   font-size: 1.7rem; /* Base paragraph font size */
   color: #ffffff;
   text-align: center;
@@ -53,11 +53,11 @@ p {
     height: auto; /* Decrease padding */
   }
 
-  h2 {
+  .section h2 {
     font-size: 2rem; /* Decrease heading size */
   }
 
-  p {
+  .section p {
     font-size: 1.5rem; /* Decrease paragraph size */
   }
 }
@@ -68,11 +68,11 @@ p {
     height: auto; /* Increase width for smaller screens */
   }
 
-  h2 {
+  .section h2 {
     font-size: 1.8rem; /* Further decrease heading size */
   }
 
-  p {
+  .section p {
     font-size: 1.4rem; /* Further decrease paragraph size */
   }
 }
@@ -88,7 +88,7 @@ p {
     font-size: 1.6rem; /* Further decrease heading size */
   }
 
-  p {
+  .section p {
     font-size: 1.3rem; /* Further decrease paragraph size */
   }
 }
@@ -105,7 +105,7 @@ p {
     font-size: 1.4rem; /* Smaller heading size */
   }
 
-  p {
+  .section p {
     font-size: 1.2rem; /* Smaller paragraph size */
   }
 }
@@ -123,7 +123,7 @@ p {
     font-size: 1.4rem; /* Smaller heading size */
   }
 
-  p {
+  .section p {
     font-size: 1rem; /* Smaller paragraph size */
   }
   /* .svg-container svg,

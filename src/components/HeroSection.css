@@ -75,32 +75,6 @@
   opacity: 1;
 }
 
-.loading {
-  color: white;
-  font-size: 2rem;
-}
-
-.loading-placeholder {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  color: #fff;
-}
-.loading-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: #030304;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-
 .hidden {
   display: none;
 }
@@ -146,15 +120,6 @@
   opacity: 1;
 }
 
-.loading-placeholder {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 2rem;
-  color: #fff;
-}
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -192,118 +157,110 @@
   }
 
   .hero-image {
-    width: 550px;
-    height: 50vh;
-    position: static;
-    margin-top: 2rem;
+    display: none;
   }
 
   .mask {
-    position: absolute;
-    width: 200%;
-    transform: skew(-40deg);
-    height: calc(22% + 3vh);
-    background-color: #030304;
-    /* bottom: 0; */
-    /* right: 0; */
-    bottom: 13%;
-    /* right: -600px; */
-    right: -160%;
+    display: none;
+  }
+}
 
-    z-index: 6;
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .hero-text h1 {
+    font-size: calc(12vw);
+  }
+
+  .hero-text .description {
+    font-size: calc(8vw - 1vh);
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .mask {
+    display: none;
+  }
+
+  .cv-button {
+    padding: 6px 14px; /* Button padding */
+    border-radius: 5px; /* Button border radius */
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 13px;
   }
 }
 
 @media only screen and (max-width: 768px) and (min-width: 700px) {
   .hero-text h1 {
-    font-size: calc(7vw);
+    font-size: calc(12vw);
   }
 
   .hero-text .description {
-    font-size: calc(4vw - 1vh);
+    font-size: calc(8vw - 1vh);
   }
 
   .hero-image {
-    width: 100%;
-    height: 7vh;
-    position: static;
+    display: none;
   }
 
   .mask {
-    position: absolute;
-    width: 200%;
-    transform: skew(-40deg);
-    height: calc(22% + 3vh);
-    background-color: #030304;
-    /* bottom: 0; */
-    /* right: 0; */
-    bottom: 13%;
-    /* right: -600px; */
-    right: -160%;
+    display: none;
+  }
 
-    z-index: 6;
+  .cv-button {
+    padding: 6px 14px; /* Button padding */
+    border-radius: 5px; /* Button border radius */
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 13px;
   }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 700px) {
   .hero-text h1 {
-    font-size: calc(7vw);
+    font-size: calc(12vw);
   }
 
   .hero-text .description {
-    font-size: calc(4vw - 1vh);
+    font-size: calc(8vw - 1vh);
   }
 
   .hero-image {
-    width: 130%;
-    height: 7vh;
-    position: static;
+    display: none;
   }
 
   .mask {
-    position: absolute;
-    width: 200%;
-    transform: skew(-45deg);
-    height: calc(22% + 3vh);
-    background-color: #030304;
-    /* bottom: 0; */
-    /* right: 0; */
-    bottom: 10%;
-    /* right: -600px; */
-    right: -150%;
+    display: none;
+  }
 
-    z-index: 6;
+  .cv-button {
+    padding: 6px 14px; /* Button padding */
+    border-radius: 5px; /* Button border radius */
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 13px;
   }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 600px) {
   .hero-text h1 {
-    font-size: calc(7vw);
+    font-size: calc(12vw);
   }
 
   .hero-text .description {
-    font-size: calc(4vw - 1vh);
+    font-size: calc(8vw - 1vh);
   }
 
   .hero-image {
-    width: 130%;
-    height: 7vh;
-    position: static;
+    display: none;
   }
 
   .mask {
-    position: absolute;
-    width: 200%;
-    transform: skew(-45deg);
-    height: calc(22% + 3vh);
-    background-color: #030304;
-    /* bottom: 0; */
-    /* right: 0; */
-    bottom: 15%;
-    /* right: -600px; */
-    right: -150%;
-
-    z-index: 6;
+    display: none;
+  }
+  .cv-button {
+    padding: 4px 12px; /* Button padding */
+    border-radius: 5px; /* Button border radius */
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 11px;
   }
 }
 
@@ -317,24 +274,17 @@
   }
 
   .hero-image {
-    width: 170%;
-    height: 7vh;
-    position: static;
+    display: none;
   }
 
   .mask {
-    position: absolute;
-    width: 200%;
-    transform: skew(-40deg);
-    height: calc(22% + 3vh);
-    background-color: #030304;
-    /* bottom: 0; */
-    /* right: 0; */
-    bottom: 13%;
-    /* right: -600px; */
-    right: -160%;
-
-    z-index: 6;
+    display: none;
+  }
+  .cv-button {
+    padding: 4px 12px; /* Button padding */
+    border-radius: 5px; /* Button border radius */
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 11px;
   }
 }
 
@@ -348,24 +298,17 @@
   }
 
   .hero-image {
-    width: 170%;
-    height: 7vh;
-    position: static;
+    display: none;
   }
 
   .mask {
-    position: absolute;
-    width: 200%;
-    transform: skew(-40deg);
-    height: calc(22% + 3vh);
-    background-color: #030304;
-    /* bottom: 0; */
-    /* right: 0; */
-    bottom: 15%;
-    /* right: -600px; */
-    right: -160%;
-
-    z-index: 6;
+    display: none;
+  }
+  .cv-button {
+    padding: 4px 12px; /* Button padding */
+    border-radius: 5px; /* Button border radius */
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 11px;
   }
 }
 
@@ -379,23 +322,26 @@
   }
 
   .hero-image {
-    width: 170%;
-    height: 7vh;
-    position: static;
+    display: none;
   }
 
   .mask {
-    position: absolute;
-    width: 200%;
-    transform: skew(-40deg);
-    height: calc(22% + 3vh);
-    background-color: #030304;
-    /* bottom: 0; */
-    /* right: 0; */
-    bottom: 17%;
-    /* right: -600px; */
-    right: -160%;
+    display: none;
+  }
+  .cv-button {
+    padding: 4px 12px; /* Button padding */
+    border-radius: 5px; /* Button border radius */
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 11px;
+  }
+}
 
-    z-index: 6;
+@media only screen and (min-width: 0px) and (max-width: 300px) {
+  .hero-image {
+    display: none;
+  }
+
+  .mask {
+    display: none;
   }
 }
