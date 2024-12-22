@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css"; // Import the CSS file
+import Spline from "@splinetool/react-spline";
 
 const Footer = () => {
   return (

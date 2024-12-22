@@ -1,23 +1,81 @@
-import { useEffect, useRef } from "react";
-import Spline from "@splinetool/react-spline";
+import React from "react";
+import { motion } from "framer-motion";
+import { useAnimation } from "../AnimationContext"; // Use the hook
 
-export default function AnimatedLine() {
-  const splineRef = useRef(null);
+const AnimatedLine = ({
+  turns = 5,
+  lineLengths = [50],
+  directions = [1],
+  strokeWidth = 4,
+  segmentLength = 80,
+  animationSpeed = 2,
+}) => {
+  const gradientId = "lineGradient";
+  const { startLineAnimation } = useAnimation(); // Access animation trigger
 
-  useEffect(() => {
-    const canvas = splineRef.current?.querySelector("canvas");
-    if (canvas) {
-      canvas.style.cursor = "default"; // or "pointer"
+  const generatePath = () => {
+    let path = "M0 0";
+    let x = 0;
+    let y = 0;
+
+    for (let i = 0; i < turns; i++) {
+      const length = lineLengths[i % lineLengths.length];
+      const direction = directions[i % directions.length];
+
+      x += length * direction;
+      path += ` L${x} ${y}`;
+      y -= length;
+      path += ` L${x} ${y}`;
     }
-  }, []);
+    return path;
+  };
+
+  const calculateTotalLength = () =>
+    (lineLengths.reduce((total, length) => total + 2 * length, 0) * turns) /
+    lineLengths.length;
+
+  const totalLength = calculateTotalLength();
 
   return (
-    <div className="line-scene">
-      <div className="mask"></div>
-      <Spline
-        scene="https://prod.spline.design/jNcbJH5-qpRTxshx/scene.splinecode"
-        ref={splineRef}
+    <motion.svg
+      width="100%"
+      height="300"
+      viewBox={`-${
+        totalLength / 2
+      } -${totalLength} ${totalLength} ${totalLength}`}
+      style={{
+        backgroundColor: "#030304",
+        position: "absolute",
+        height: "100vh",
+      }}
+    >
+      {startLineAnimation && (
+        <defs>
+          <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stopColor="#81d3ff" />
+            <stop offset="100%" stopColor="#ff3eff" />
+          </linearGradient>
+        </defs>
+      )}
+      <motion.path
+        d={generatePath()}
+        fill="transparent"
+        stroke={`url(#${gradientId})`}
+        strokeWidth={strokeWidth}
+        strokeLinecap="round"
+        strokeDasharray={`${segmentLength} ${totalLength}`}
+        strokeDashoffset={0}
+        animate={{
+          strokeDashoffset: startLineAnimation ? [-totalLength, 0] : 0, // Animate when context changes
+        }}
+        transition={{
+          duration: animationSpeed,
+          repeat: Infinity,
+          ease: "circOut",
+        }}
       />
-    </div>
+    </motion.svg>
   );
-}
+};
+
+export default AnimatedLine;

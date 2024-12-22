@@ -8,56 +8,68 @@
 
 .projects-title {
   text-align: center;
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: bold;
   margin-bottom: 2rem;
+  color: #ffffff;
+  font-family: "Recoleta", sans-serif;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5rem;
   justify-content: center;
   max-width: 1200px;
-  margin: 0 auto; /* Center the grid */
+  margin: 0 auto;
+  padding: 0;
 }
 
 .project-card {
-  background-color: #0c0c0c;
+  background-color: #0c0c0c; /* Fallback color */
   border-radius: 16px;
   overflow: hidden;
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
   display: flex;
   border: 2px solid #3b3b3b;
   flex-direction: column;
   position: relative;
+  padding: 1rem;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-8px); /* Card levitates on hover */
 }
 
 .project-image-wrapper {
-  overflow: hidden;
-  height: auto;
-  padding: 1rem;
+  height: 250px; /* Set the desired height for the image wrapper */
+  padding: 0.5rem; /* Adjust padding to ensure the image doesn't touch the edges */
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(
-    135deg,
-    #81d3ff,
-    #ff3eff
-  ); /* Gradient background */
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow around the image wrapper */
+  transition: transform 0.3s ease; /* Smooth hover transition for the wrapper */
+}
+
+.project-image-wrapper:hover {
+  transform: translateY(-5px); /* Levitate the wrapper itself */
 }
 
 .project-image {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: 100%; /* Image will take up the entire height of the wrapper */
+  object-fit: contain; /* Ensure image maintains its aspect ratio */
+  transition: transform 0.3s ease; /* Add smooth transition on hover */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.9); /* Shadow behind the image */
+}
+
+.project-image-wrapper:hover .project-image {
+  transform: scale(1.1); /* Image levitates inside the wrapper */
 }
 
 .project-details {
@@ -83,7 +95,6 @@
   font-size: 1rem;
   line-height: 1.4;
   word-spacing: 5px;
-  line-height: 1.7;
   color: #a3a3a3;
   text-align: left;
   font-family: "Recoleta", sans-serif;
@@ -120,20 +131,33 @@
 
 .github-link i:hover {
   transform: scale(1.2);
-  /* color: #4ade80; Light green hover color */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .projects-container {
-    padding: 1rem;
+/* Responsive design */
+@media only screen and (min-width: 700px) {
+  .projects-grid {
+    /* grid-template-columns: 1fr; */
+    gap: 1rem;
+    padding: 2rem;
   }
 
+  .project-card {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 480px) {
   .projects-grid {
-    grid-template-columns: 1fr; /* Single column on small screens */
+    /* grid-template-columns: 1fr; */
+    gap: 1.2rem;
+    padding: 2rem;
   }
 
   .project-title {
     font-size: 1.2rem;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
   }
 }

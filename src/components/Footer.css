@@ -1,29 +1,38 @@
 .footer {
-  background-color: #030304; /* Dark background color */
+  background-color: #030304;
   color: #fff;
   padding: 2rem 0;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .footer-container {
-  max-width: 600px; /* Adjust as needed */
+  max-width: 900px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-section {
-  margin-bottom: 1.5rem;
+  width: 100%;
 }
 
 .footer-section ul {
   list-style: none;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 4rem; /* Spacing between links */
+  flex-wrap: wrap;
 }
 
 .connect {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 .linksvg {
@@ -39,13 +48,13 @@
 }
 
 .footer-section li {
-  margin-bottom: 1rem;
+  margin-bottom: 0; /* Prevent unnecessary spacing between links */
 }
 
 .footer-section a {
   display: flex;
   align-items: center;
-  color: #cccccc; /* Light color of white */
+  color: #cccccc;
   text-decoration: none;
   transition: color 0.3s, text-decoration 0.3s;
 }
@@ -56,6 +65,26 @@
 
 /* Hover effects */
 .footer-section a:hover {
-  color: #ffffff; /* Pure white on hover */
+  color: #ffffff;
   text-decoration: underline;
+}
+
+/* Mobile layout - Stack links vertically */
+@media only screen and (min-width: 300px) and (max-width: 768px) {
+  .footer-section ul {
+    flex-direction: column; /* Stack vertically */
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .footer-section li {
+    margin-bottom: 1rem;
+  }
+
+  .connect {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
 }

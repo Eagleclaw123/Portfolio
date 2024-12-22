@@ -11,33 +11,53 @@ import AnimatedLine from "./components/AnimatedLine.jsx";
 import SkillsContainer from "./components/SkillsContainer.jsx";
 import Projects from "./components/Projects.jsx";
 import Footer from "./components/Footer.jsx";
+import { AnimationProvider } from "./AnimationContext.jsx";
 
 function App() {
   function handleLoad() {}
+
   return (
-    <div className="App">
-      <HeroSection onSpineLoaded={handleLoad} />
-      <div className="sections">
-        <Section
-          svgPath={desktopSvg}
-          title="Web Developer"
-          description="A full stack web developer experienced in building both front-end and back-end of web applications, ensuring seamless functionality and user experience"
-        />
-        <Section
-          svgPath={cloudSvg}
-          title="Cloud and DevOps"
-          description="A Cloud and DevOps professional with hands-on experience in cloud platforms, automation, and continuous integration for efficient software deployment."
-        />
-        <Section
-          svgPath={mobileSvg}
-          title="Mobile Developer"
-          description="A mobile developer experienced in building and maintaining applications for iOS and Android, focusing on delivering high-performance, user-friendly mobile experiences."
-        />
+    <AnimationProvider>
+      <div className="App">
+        {/* Animated Line */}
+        <div className="animated-line-container">
+          <AnimatedLine
+            turns={4}
+            lineLengths={[200, 300, 200, 300, 100]}
+            directions={[1, 1, 1, 1, 1]}
+            strokeWidth={8}
+            segmentLength={50}
+            animationSpeed={3}
+            restartInterval={3} // Restart every 6 seconds
+          />
+        </div>
+
+        {/* Hero Section */}
+        <HeroSection onSpineLoaded={handleLoad} />
+
+        {/* Other Sections */}
+        <div className="sections">
+          <Section
+            svgPath={desktopSvg}
+            title="Web Developer"
+            description="A full stack web developer experienced in building both front-end and back-end of web applications, ensuring seamless functionality and user experience"
+          />
+          <Section
+            svgPath={cloudSvg}
+            title="Cloud and DevOps"
+            description="A Cloud and DevOps professional with hands-on experience in cloud platforms, automation, and continuous integration for efficient software deployment."
+          />
+          <Section
+            svgPath={mobileSvg}
+            title="Mobile Developer"
+            description="A mobile developer experienced in building and maintaining applications for iOS and Android, focusing on delivering high-performance, user-friendly mobile experiences."
+          />
+        </div>
+        <SkillsContainer />
+        <Projects />
+        <Footer />
       </div>
-      <SkillsContainer />
-      <Projects />
-      <Footer />
-    </div>
+    </AnimationProvider>
   );
 }
 
