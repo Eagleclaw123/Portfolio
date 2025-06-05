@@ -3,6 +3,22 @@ import "./Projects.css";
 
 const projects = [
   {
+    title: "CampusFlow – Smart Campus Management Application",
+    description:
+      "I built a full-stack campus management app used by 1,500+ students and staff to streamline academic and administrative tasks. The mobile frontend was developed in React Native, with a Node.js backend using MongoDB and Mongoose. The backend ran in Docker containers behind an Nginx load balancer on an on-premise Ubuntu 24.04 server. I implemented Jenkins CI/CD for zero-downtime deployments and secured traffic via Cloudflare Tunnel with custom DNS routing",
+    technologies: [
+      "React Native",
+      "Node.js",
+      "MongoDB",
+      "Docker",
+      "Nginx",
+      "Jenkins CI/CD",
+    ],
+    image: "/assets/campusflow.jpg", // Replace with your image path
+    backgroundImage: "/assets/bg1.png",
+    github: "https://github.com/Eagleclaw123/CampusFlow", // GitHub link
+  },
+  {
     title: "ReStore",
     description:
       "I developed a Python-based tool that restores design elements in PDFs and images by removing text seamlessly. The tool uses a deep learning model, with EasyOCR achieving 95% accuracy in text detection. For inpainting, LaMa ensures a 92% accuracy in restoring the design, preserving the original layout and details.",
@@ -81,15 +97,6 @@ const projects = [
     image: "/assets/img3.png", // Replace with your image path
     backgroundImage: "/assets/bg6.jpg",
     github: "https://github.com/Eagleclaw123/Calendar-App-", // GitHub link
-  },
-  {
-    title: "How Many Tries",
-    description:
-      "I have created an interactive mobile game where users think of a number, and the system attempts to guess it. The game displays the number of tries it took to guess correctly, providing a fun and engaging experience for players.",
-    technologies: ["React Native", "Expo", "Android Studio", "TypeScript"],
-    image: "/assets/img2.png", // Replace with your image path
-    backgroundImage: "/assets/img10.jpg",
-    github: "https://github.com/Eagleclaw123/How-Many-Tries", // GitHub link
   },
 ];
 

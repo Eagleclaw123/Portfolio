@@ -48,6 +48,8 @@ const RotatingSphere = () => {
       "/assets/postman.png",
       "/assets/microsoft-word.png",
       "/assets/linux.png",
+      "/assets/jenkins.svg",
+      "/assets/redis.svg",
     ];
 
     const radius = 3; // Sphere radius

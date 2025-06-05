@@ -6,6 +6,7 @@ const skills = [
   { name: "C", color: "blue" },
   { name: "C++", color: "green" },
   { name: "Node.js", color: "orange" },
+  { name: "ReactNative", color: "violet" },
   { name: "React", color: "cyan" },
   { name: "MongoDB", color: "pink" },
   { name: "CSS", color: "teal" },
@@ -24,6 +25,8 @@ const skills = [
   { name: "Linux", color: "darkgreen" },
   { name: "AWS", color: "orange" },
   { name: "Microsoft Azure", color: "purple" },
+  { name: "Jenkins", color: "brown" },
+  { name: "Redis", color: "navy" },
 ];
 
 const Skills = React.memo(() => {

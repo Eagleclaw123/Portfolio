@@ -54,7 +54,7 @@ const HeroSection = ({ onSpineLoaded }) => {
     <div className="hero-section">
       <div className="cv-button-container">
         <a
-          href="https://drive.google.com/file/d/1xyvq3jX5HzOTGiaNYw6F9ZXYXXY3IE2u/view"
+          href="https://drive.google.com/file/d/1aB24nXd85gOBoY7DS4il7bG9sRiXHcQS/view?usp=drive_link"
           target="_blank"
           rel="noopener noreferrer"
           className="cv-button"
