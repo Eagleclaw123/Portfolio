@@ -48,7 +48,7 @@ const skills = [
   { name: "AI Agents", color: "gold" },
   { name: "Model Evaluation", color: "coral" },
   { name: "Inference APIs", color: "skyblue" },
-  { name: "LLMOps", color: "darkgreen" },
+  // { name: "LLMOps", color: "darkgreen" },
 ];
 
 const Skills = React.memo(() => {
