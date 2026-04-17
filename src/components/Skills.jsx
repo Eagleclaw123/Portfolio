@@ -21,6 +21,7 @@ const skills = [
   { name: "Express.js", color: "violet" },
   { name: "MongoDB", color: "pink" },
   { name: "Redis", color: "navy" },
+  {name:"Web Sockets",color:"teal"}
 
   { name: "Git", color: "olive" },
   { name: "Linux", color: "darkgreen" },
