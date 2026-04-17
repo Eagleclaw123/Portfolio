@@ -14,7 +14,7 @@ const projects = [
       "Nginx",
       "Jenkins CI/CD",
     ],
-    image: "/assets/campusflow.jpg", // Replace with your image path
+    image: "/assets/campusflowapp.jpeg", // Replace with your image path
     backgroundImage: "/assets/bg1.png",
     github: "https://github.com/Eagleclaw123/CampusFlow", // GitHub link
   },
@@ -37,41 +37,57 @@ const projects = [
     github: "https://github.com/Eagleclaw123/ReStore", // GitHub link
   },
   {
-    title: "Delicious Meals",
+    title: "CampusFlow AI – Agentic Query Assistant",
     description:
-      "a full-stack web application that allows users to share and explore recipes. The platform ensures smooth performance and reliable access to recipe data, with real-time updates and efficient backend management. Hosted on AWS EC2, the app leverages PM2 for optimized process handling, offering users a seamless and responsive experience.",
+      "I built an AI-powered agentic backend that lets college staff and students query a live MongoDB database using plain English. The FastAPI service uses a RAG pipeline (ChromaDB + sentence-transformers) to retrieve relevant Mongoose schemas, then passes them to an LLM to generate and self-correct MongoDB queries in a retry loop. It integrates with the existing Node.js backend via role-based access control and supports multi-turn conversational sessions stored in MongoDB.",
     technologies: [
-      "Next.js",
+      "Python",
+      "FastAPI",
+      "LangChain",
+      "ChromaDB",
+      "MongoDB",
+      "OpenAI API",
+      "RAG",
       "Node.js",
-      "TypeScript",
-      "SQlite",
-      "AWS(EC2)",
-      "Framer Motion",
-      "Redux",
-      "Bootstrap",
-      "Git",
-      "Postman",
     ],
-    image: "/assets/img1.png", // Replace with your image path
-    backgroundImage: "/assets/bg2.png",
-    github: "https://github.com/Eagleclaw123/Delicious-Meals", // GitHub link
-  },
-
-  {
-    title: "Student Data Portal",
-    description:
-      "The portal features an OTP-based login system . Students can access real-time academic data, including grades and attendance, with a built-in GPA calculator and centralized timetable management . This system streamlines academic data access, enhances security, and simplifies the student experience",
-    technologies: [
-      "JavaScript",
-      "Google Sheets API,",
-      "Papa Parser",
-      "Figma",
-      "HTML",
-      "CSS",
-    ],
-    image: "/assets/img4.png", // Replace with your image path
+    image: "/assets/aichatbot.png",
     backgroundImage: "/assets/bg1.png",
-    github: "https://github.com/Eagleclaw123/Student-Data-Portal", // GitHub link
+    github: "https://github.com/Eagleclaw123/CampusFlow-Backend",
+  },
+  {
+    title: "ShuttleSync – Badminton Tournament Management App",
+    description:
+      "Developed a full-stack badminton tournament platform for live scoring, map-based discovery, and shuttle services targeting players, organizers, and sports shops. Built React Native mobile frontend with Node.js/MongoDB backend using Mongoose and Socket.io for real-time scoring and match updates. Deployed backend in Docker containers behind Nginx load balancer on AWS EC2, with Jenkins CI/CD for zero-downtime deployments and high availability.",
+    technologies: [
+      "React Native",
+      "Node.js",
+      "MongoDB",
+      "Docker",
+      "Nginx",
+      "Jenkins CI/CD",
+      "Socket.io",
+    ],
+    image: "/assets/shuttlesync.jpeg", // Replace with your image path
+    backgroundImage: "/assets/bg1.png",
+    github: null, // GitHub link
+  },
+  {
+    title: "Event Scraping Microservice",
+    description:
+      "I built a Python-based microservice for intelligent event scraping with automatic pagination detection and AI-powered data extraction using Google Gemini 3.0 Flash. The service uses Crawl4AI and Playwright for async crawling, supports 6 pagination strategies (URL params, path-based, next button, load more, infinite scroll), and integrates OpenStreetMap geocoding for venue coordinates. It exposes a FastAPI REST endpoint consumed by a Node.js backend with date range filtering and category-based extraction.",
+    technologies: [
+      "Python",
+      "FastAPI",
+      "Crawl4AI",
+      "Playwright",
+      "Google Gemini",
+      "Uvicorn",
+      "OpenStreetMap",
+      "Node.js",
+    ],
+    image: "/assets/scraper.png",
+    backgroundImage: "/assets/bg3.jpg",
+    github: null,
   },
 
   {
@@ -88,15 +104,6 @@ const projects = [
     image: "/assets/img5.jpg", // Replace with your image path
     backgroundImage: "/assets/bg4.png",
     github: null, // GitHub link
-  },
-  {
-    title: "Your Smart Calender ",
-    description:
-      "I have developed a Dynamic Calendar that allows users to add events throughout the day without time conflicts. It features a responsive design for easy access on any device and includes an intuitive search function to quickly find events for any specific day, making it ideal for efficient scheduling.",
-    technologies: ["React.js", "CSS-Modules", "Framer Motion", "Spline"],
-    image: "/assets/img3.png", // Replace with your image path
-    backgroundImage: "/assets/bg6.jpg",
-    github: "https://github.com/Eagleclaw123/Calendar-App-", // GitHub link
   },
 ];
 
