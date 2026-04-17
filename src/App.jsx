@@ -3,6 +3,7 @@ import "./App.css";
 import cloudSvg from "./assets/icons/cloud.svg";
 import mobileSvg from "./assets/icons/mobile.svg";
 import desktopSvg from "./assets/icons/desktop.svg";
+import aiSvg from "./assets/icons/ai.svg";
 import { AnimationProvider } from "./AnimationContext.jsx";
 
 // Lazy Load Components
@@ -58,6 +59,11 @@ function App() {
               svgPath={mobileSvg}
               title="Mobile Developer"
               description="A mobile developer experienced in building and maintaining applications for iOS and Android, focusing on delivering high-performance, user-friendly mobile experiences."
+            />
+            <Section
+              svgPath={aiSvg}
+              title="AI Engineer"
+              description="An AI engineer specializing in building intelligent systems with LLMs, RAG pipelines, and agentic workflows for production applications."
             />
           </div>
 

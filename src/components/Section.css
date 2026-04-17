@@ -6,9 +6,9 @@
   margin: 20px 10px;
   padding: 20px;
   border-radius: 8px;
-  width: 80%;
+  width: calc(25% - 20px);
   max-width: 500px;
-  height: 45vh;
+  min-height: 350px;
   transition: transform 0.3s;
   border: 2px solid #1d1d1d;
 }
@@ -49,47 +49,47 @@
 @media (max-width: 1200px) {
   .section {
     padding: 15px;
-    width: 90%;
-    height: auto; /* Decrease padding */
+    width: calc(33.33% - 20px);
+    min-height: auto;
   }
 
   .section h2 {
-    font-size: 2rem; /* Decrease heading size */
+    font-size: 2rem;
   }
 
   .section p {
-    font-size: 1.5rem; /* Decrease paragraph size */
+    font-size: 1.5rem;
   }
 }
 
 @media (max-width: 992px) {
   .section {
-    width: 90%;
-    height: auto; /* Increase width for smaller screens */
+    width: calc(50% - 20px);
+    min-height: auto;
   }
 
   .section h2 {
-    font-size: 1.8rem; /* Further decrease heading size */
+    font-size: 1.8rem;
   }
 
   .section p {
-    font-size: 1.4rem; /* Further decrease paragraph size */
+    font-size: 1.4rem;
   }
 }
 
 @media (max-width: 768px) {
   .section {
-    width: 95%; /* Full width on smaller devices */
-    height: auto; /* Allow height to adjust based on content */
-    margin: 15px; /* Adjust margins for smaller screens */
+    width: 95%;
+    min-height: auto;
+    margin: 15px;
   }
 
   .section h2 {
-    font-size: 1.6rem; /* Further decrease heading size */
+    font-size: 1.6rem;
   }
 
   .section p {
-    font-size: 1.3rem; /* Further decrease paragraph size */
+    font-size: 1.3rem;
   }
 }
 
