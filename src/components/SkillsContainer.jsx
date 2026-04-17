@@ -1,19 +1,20 @@
 import React from "react";
 import "./SkillsContainer.css";
 import Skills from "./Skills";
-import RotatingSphere from "./RotatingSphere.jsx";
+import RotatingSphere from "./RotatingSphere";
 
 const SkillsContainer = () => {
   return (
-    <div className="maincontainer">
+    <section className="maincontainer" id="skills">
       <div className="container container-skills">
         <h1>Skills</h1>
         <Skills />
       </div>
-      <div className="container">
+
+      <div className="container container-sphere">
         <RotatingSphere />
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,137 +1,154 @@
 .skills-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  padding: 1rem; /* Added padding for better spacing */
+  width: 100%;
+  min-width: 0;
 }
 
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: start;
+  gap: 0.9rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  min-width: 0;
 }
 
 .skill-card {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.7rem 1rem;
   background-color: #2e2e2e;
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
   color: #e5e7eb;
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1;
   border-radius: 9999px;
-  width: fit-content;
-  margin-bottom: 0.25rem;
-  transition: transform 0.2s ease; /* Added transition for hover effect */
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-2px);
+  background-color: #3a3a3a;
 }
 
 .skill-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 
 .skill-name {
   color: inherit;
+  white-space: nowrap;
 }
 
 /* Skill-specific colors */
 .skill-dot.blue {
   background-color: #3b82f6;
 }
-
 .skill-dot.green {
   background-color: #10b981;
 }
-
 .skill-dot.yellow {
   background-color: #f59e0b;
 }
-
 .skill-dot.red {
   background-color: #ef4444;
 }
-
 .skill-dot.orange {
   background-color: #f97316;
 }
-
 .skill-dot.pink {
   background-color: #ec4899;
 }
-
 .skill-dot.purple {
   background-color: #a855f7;
 }
-
 .skill-dot.cyan {
   background-color: #06b6d4;
 }
-
 .skill-dot.teal {
   background-color: #14b8a6;
 }
-
 .skill-dot.magenta {
   background-color: #d946ef;
 }
-
 .skill-dot.lime {
   background-color: #84cc16;
 }
-
 .skill-dot.violet {
   background-color: #8b5cf6;
 }
-
 .skill-dot.turquoise {
   background-color: #2dd4bf;
 }
-
 .skill-dot.gold {
   background-color: #facc15;
 }
-
 .skill-dot.salmon {
   background-color: #f87171;
 }
-
 .skill-dot.navy {
   background-color: #1e3a8a;
 }
-
 .skill-dot.brown {
   background-color: #a16207;
 }
-
 .skill-dot.olive {
   background-color: #6a994e;
 }
-
 .skill-dot.coral {
   background-color: #fb7185;
 }
-
 .skill-dot.skyblue {
   background-color: #38bdf8;
 }
-
 .skill-dot.darkgreen {
   background-color: #065f46;
 }
 
-@media only screen and (min-width: 400px) and (max-width: 780px) {
+@media (max-width: 900px) {
+  .skills-grid {
+    gap: 0.75rem;
+  }
+
   .skill-card {
-    font-size: 0.7rem;
-    padding: 0.6rem;
+    font-size: 0.84rem;
+    padding: 0.62rem 0.85rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .skill-card {
+    font-size: 0.78rem;
+    padding: 0.56rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-grid {
+    gap: 0.6rem;
+  }
+
+  .skill-card {
+    padding: 0.52rem 0.72rem;
+    font-size: 0.74rem;
   }
 
   .skill-dot {
-    width: 6px;
-    height: 6px;
+    width: 7px;
+    height: 7px;
+  }
+
+  .skill-name {
+    white-space: normal;
+    overflow-wrap: anywhere;
   }
 }
